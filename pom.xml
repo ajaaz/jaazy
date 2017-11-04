@@ -1,10 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>jaazy</groupId>
+  <groupId>eu.jaaz</groupId>
   <artifactId>jaazy</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <dependencies>
+    <dependencies>
+     <dependency>
+      <groupId>eu.jaaz</groupId>
+      <artifactId>jaaz-core</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <type>war</type>
+    </dependency>
 	<dependency>
     	<groupId>javax</groupId>
     	<artifactId>javaee-api</artifactId>
@@ -27,9 +33,16 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.0.0</version>
         <configuration>
+           <overlays>
+		     <overlay>			
+       			<groupId>eu.jaaz</groupId>
+       			<artifactId>jaaz-core</artifactId>
+     		</overlay>
+   		</overlays>
           <warSourceDirectory>WebContent</warSourceDirectory>
         </configuration>
       </plugin>
+      
     </plugins>
   </build>
 </project>
