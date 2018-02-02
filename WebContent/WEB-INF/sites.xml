@@ -1,5 +1,9 @@
 <sites>
 	<site id="jaazy" default="true" domain="jaazy.co">
 		<domain name="jaazy.x.com"/>
+		<languages>
+			<lang code="en" default="true"/>
+			<lang code="pl"/>
+		</languages>
 	</site>
 </sites>
